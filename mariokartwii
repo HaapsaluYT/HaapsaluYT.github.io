@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Haapsalu's Hub</title>
+<style id="jsbin-css">
+link{
+	display:none
+}
+p{
+  font-family: trebuchet ms;
+  font-size: 15px;
+  color: #00CCFF;
+  font-weight: bold;
+  text-indent: 15px;
+  text-shadow: -1px -1px #FFCC00;
+  letter-spacing: -0.3px;
+  line-height: 15px
+}
+#funfactlink{
+  font-family: calibri;
+	text-shadow: 0px 0px;
+	color: #33CC66;
+}
+h1{
+	font-size:25px;
+	font-family:century gothic;
+	color:red;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+ol{
+	font-family:Comic sans ms;
+	font-size: 12px;
+	line-height: 12px;
+}
+h2{
+	font-size: 25px;
+	font-family:century gothic;
+	color:orange;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+h3{
+	font-size:25px;
+	font-family:century gothic;
+	color:#EEEE00;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+h4{
+	font-size:25px;
+	font-family:century gothic;
+	color:#EECC00;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+h5{
+	font-size:25px;
+	font-family:century gothic;
+	color:#00CC00;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+h6{
+	font-size:25px;
+	font-family:century gothic;
+	color:#CCFF00;
+	margin-top:1px;
+	margin-bottom:1px;
+}
+h7{
+	font-size:25px;
+	font-family:century gothic;
+	color:brown;
+	margin-top:1px;
+	margin-bottom:1px;
+	font-weight:bold;
+}
+h8{
+	font-size:25px;
+	font-family:century gothic;
+	color:#DDEE11;
+	margin-top:1px;
+	margin-bottom:1px;
+	font-weight:bold;
+}
+</style>
+</head>
+<body>
+  <p>Hi, I am Haapsalu. Please sub to my <a href="https://www.youtube.com/channel/UCUM9V90AJen22dsWylczjMQ">YouTube</a> channel!</p>
+  <p id="funfactlink">Did you know that Bhutan had no phones until the 1980's? 
+	  Find other fun facts about geography <a href="facts.html">here</a>.</p>
+	<p>Here are the Mario Kart Wii Tracks!</p>
+	<h1>Mushroom Cup</h1>
+<ol type="1">
+	<li><a href="http://mariokart.wikia.com/wiki/Luigi_Circuit_(Wii)">Luigi Circuit</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Moo_Moo_Meadows">Moo Moo Meadows</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Mushroom_Gorge">Mushroom Gorge</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Toad%27s_Factory">Toad's Factory</a></li>
+	</ol>
+	<h2>Flower Cup</h2>
+<ol type="1">
+	<li><a href="http://mariokart.wikia.com/wiki/Mario_Circuit_(Wii)">Mario Circuit</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Coconut_Mall">Coconut Mall</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/DK_Summit">DK Summit</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Wario%27s_Gold_Mine">Wario's Gold Mine</a></li>
+	</ol>
+  <h3>Star Cup</h3>
+<ol>
+	<li><a href="http://mariokart.wikia.com/wiki/Daisy_Circuit">Daisy Circuit</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Koopa_Cape">Koopa Cape</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Maple_Treeway">Maple Treeway</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Grumble_Volcano">Grumble Volcano</a></li>
+	</ol>
+	<h4>Special Cup</h4>
+<ol>
+	<li><a href="http://mariokart.wikia.com/wiki/Dry_Dry_Ruins">Dry Dry Ruins</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Moonview_Highway">Moonview Highway</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Bowser%27s_Castle_(Wii)">Bowser's Castle</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Rainbow_Road_(Wii)">Rainbow Road</a></li>
+	</ol>
+	<h5>Shell Cup</h5>
+<ol type="I">
+	<li><a href="http://mariokart.wikia.com/wiki/Peach_Beach">GCN Peach Beach</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Yoshi_Falls">DS Yoshi Falls</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Ghost_Valley_2">SNES Ghost Valley 2</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Mario_Raceway">N64 Mario Raceway</a></li>
+	</ol>
+	<h6>Banana Cup</h6>
+<ol type="I">
+	<li><a href="http://mariokart.wikia.com/wiki/Sherbet_Land_(N64)">N64 Sherbet Land</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Shy_Guy_Beach">GBA Shy Guy Beach</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/DS_Delfino_Square">DS Delfino Square</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Waluigi_Stadium_(GCN)">GCN Waluigi Stadium</a></li>
+	</ol>
+	<h7>Leaf Cup</h7>
+<ol type="I">
+	<li><a href="http://mariokart.wikia.com/wiki/Desert_Hills">DS Desert Hills</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Bowser_Castle_3_(GBA)">GBA Bowser Castle 3</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/DK%27s_Jungle_Parkway">N64 DK's Jungle Parkway</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Mario_Circuit_(GCN)">GCN Mario Circuit</a></li>
+	</ol>
+	<h8>Lightning Cup</h8>
+<ol type="I">
+	<li><a href="http://mariokart.wikia.com/wiki/Mario_Circuit_3">SNES Mario Circuit 3</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Peach_Gardens">DS Peach Gardens</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/DK_Mountain">GCN DK Mountain</a></li>
+	<li><a href="http://mariokart.wikia.com/wiki/Bowser%27s_Castle_(N64)">N64 Boswer's Castle</a></li>
+	</ol>
+</body>
+</html>

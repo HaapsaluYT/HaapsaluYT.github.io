@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>United States Locations Quiz</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<style id="jsbin-css">
+body {
+    background-color: #ffffff;
+}
+ 
+.grid {
+    width: %;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2.5% 12.5% 12.5% 12.5%;
+    border: 0.5% solid #ffffff;
+    
+}
+ 
+.grid h1 {
+    font-family: "verdana";
+    background-color: #0067ab;
+    font-size: 8vw;
+    text-align: center;
+    color: #ffffff;
+    padding: 0.5% 0%;
+    
+}
+ 
+#score {
+    color: #0067ab;
+    text-align: center;
+    font-size: 7.5vw;
+}
+ 
+.grid #question {
+    font-family: "verdana";
+    font-size: 6vw;
+    color: #0067ab;
+}
+ 
+.buttons {
+    margin-top: 7.5%;
+		font-family: "verdana";
+}
+ 
+#btn0, #btn1, #btn2, #btn3 {
+    background-color: #0067ab;
+    width: 37.5%;
+    font-size: 4vw;
+    color: #ffffff;
+    border: 0.25% solid #1D3C6A;
+    margin: 2.5% 9.5% 2.5% 0%;
+    padding: 2.5% 2.5%;
+		font-family: "verdana";
+}
+ 
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+    cursor: pointer;
+    background-color: #0067ab;
+}
+ 
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+    outline: 0;
+}
+ 
+#progress {
+    color: #2b2b2b;
+    font-size: 18px;
+}
+</style>
+</head>
+<body>
+    <div class="grid">
+        <div id="quiz">
+            <h1>International Cities Quiz</h1>
+            <hr style="margin-bottom: 20px">
+ 
+            <p id="question"></p>
+ 
+            <div class="buttons">
+                <button id="btn0"><span id="choice0"></span></button>
+                <button id="btn1"><span id="choice1"></span></button>
+                <button id="btn2"><span id="choice2"></span></button>
+                <button id="btn3"><span id="choice3"></span></button>
+            </div>
+ 
+            <hr style="margin-top: 50px">
+            <footer>
+                <p id="progress">Question x of y</p>
+            </footer>
+        </div>
+    </div>
+ 
+ 
+<script src="question.js"></script>
+ 
+<script id="jsbin-javascript">
+var arr = [];
+while(arr.length < 10){
+    var r = Math.floor(Math.random() * 11);
+    if(arr.indexOf(r) === -1) arr.push(r);
+}
+console.log(arr);
+ function Quiz(questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.questionIndex = 0;
+		this.questionLoad = arr[this.questionIndex];
+}
+
+Quiz.prototype.getQuestionLoad = function() {
+    return this.questions[this.questionLoad];
+}
+ 
+Quiz.prototype.guess = function(answer) {
+    if(this.getQuestionLoad().isCorrectAnswer(answer)) {
+        this.score++;
+    }
+ 
+    this.questionIndex++;
+		this.questionLoad = arr[this.questionIndex];
+}
+ 
+Quiz.prototype.isEnded = function() {
+    return this.questionIndex === 10;
+}
+ 
+ 
+function Question(text, choices, answer) {
+    this.text = text;
+    this.choices = choices;
+    this.answer = answer;
+}
+ 
+Question.prototype.isCorrectAnswer = function(choice) {
+    return this.answer === choice;
+}
+ 
+ 
+function populate() {
+    if(quiz.isEnded()) {
+        showScores();
+    }
+    else {
+        // show question
+        var element = document.getElementById("question");
+        element.innerHTML = quiz.getQuestionLoad().text;
+ 
+        // show options
+        var choices = quiz.getQuestionLoad().choices;
+        for(var i = 0; i < choices.length; i++) {
+            var element = document.getElementById("choice" + i);
+            element.innerHTML = choices[i];
+            guess("btn" + i, choices[i]);
+        }
+ 
+        showProgress();
+    }
+};
+ 
+function guess(id, guess) {
+    var button = document.getElementById(id);
+    button.onclick = function() {
+        quiz.guess(guess);
+        populate();
+    }
+};
+ 
+ 
+function showProgress() {
+    var currentQuestionNumber = quiz.questionIndex + 1;
+    var element = document.getElementById("progress");
+    element.innerHTML = "Question " + currentQuestionNumber + " of " + 10;
+};
+ 
+function showScores() {
+    var gameOverHTML = "<h1>Results</h1>";
+    gameOverHTML += "<h2 id='score'> Final Score: " + quiz.score + "</h2>";
+    var element = document.getElementById("quiz");
+    element.innerHTML = gameOverHTML;
+};
+ 
+// create questions here
+var questions = [
+    new Question("Which state is the Show Me State?", ["Missouri", "Alabama", "Tennessee", "Pennsylvania"], "Missouri"),
+    new Question("The geographical center of the 48 Contiguous United States is where?", ["Nebraska", "Colorado", "Kansas", "Arkansas"], "Kansas"),
+    new Question("Savor fresh oranges in the biggest US orange producer, which is?", ["California", "Texas", "New York", "Florida"], "Florida"),
+    new Question("White Sands National Park, a bomb test site, can be found in which state?", ["New Mexico", "Arizona", "Utah", "Colorado"], "New Mexico"),
+    new Question("The Snake River doesn't snake through which of these states?", ["Washington", "Oregon", "Wyoming", "Montana"], "Montana"),
+	new Question("Zanzibar is an island place that was grouped with which African country?", ["Tanzania", "Equatorial Guinea", "Guinea-Bissau", "Guinea"], "Tanzania"),
+	new Question("The Cook Islands belong to which country?", ["Papua New Guinea", "France", "New Zealand", "Chile"], "New Zealand"),
+	new Question("Socotra, a UNESCO Heritage site and island, belongs to which Arab country?", ["Yemen", "Somalia", "Egypt", "Lebanon"], "Yemen"),
+	new Question("Which of these countries isn't on the Strait of Hormuz?", ["Iran", "United Arab Emirates", "Oman", "Saudi Arabia"], "Saudi Arabia"),
+	new Question("Wallachia is a part of which country?", ["Romania", "Hungary", "Belarus", "Bosnia and Herzegovina"], "Romania"),
+	new Question("Where can you find Penza?", ["Belarus", "Russia", "Qatar", "Estonia"], "Russia"),
+];
+
+// create quiz
+var quiz = new Quiz(questions);
+ 
+// display quiz
+populate();
+</script>
